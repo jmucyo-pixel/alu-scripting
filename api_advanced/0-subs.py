@@ -15,11 +15,7 @@ def number_of_subscribers(subreddit):
     headers = {"User-Agent": "python:subs.checker:v1.0 (by /u/example)"}
 
     try:
-        response = requests.get(
-            url,
-            headers=headers,
-            allow_redirects=False
-        )
+        response = requests.get(url, headers=headers, allow_redirects=False)
     except requests.exceptions.RequestException:
         return 0
 
